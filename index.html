@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kebab u Pajdy — Dąbrowa Tarnowska | Kebab, Zapiekanki, Frytki</title>
-<meta name="description" content="Kebab u Pajdy w Dąbrowie Tarnowskiej. Świeże surówki, autorskie sosy własnej produkcji i najwyższej jakości mięso od lokalnych dostawców. Kebab kurczak/wołowina, zapiekanki, frytki. Tel. 577 550 552.">
+<title>Kebab u Pajdy — Dąbrowa Tarnowska | Kebab, Burgery, Zapiekanki, Frytki</title>
+<meta name="description" content="Kebab u Pajdy w Dąbrowie Tarnowskiej. Świeże surówki, autorskie sosy własnej produkcji, mięso najwyższej jakości i burgery 100% wołowina. Kebab kurczak/wołowina, burgery, zapiekanki, frytki. Tel. 577 550 552.">
 <meta property="og:type" content="restaurant">
-<meta property="og:title" content="Kebab u Pajdy — Dąbrowa Tarnowska">
-<meta property="og:description" content="Kebab kurczak/wołowina, zapiekanki, frytki i autorskie sosy. Otwarte Pon–Sb 11–22, Nd 13–22. tel. 577 550 552">
+<meta property="og:title" content="Kebab & Burger u Pajdy — Dąbrowa Tarnowska">
+<meta property="og:description" content="Kebaby kurczak/wołowina, burgery 100% wołowina, zapiekanki i frytki. Otwarte Pon–Sb 11–22, Nd 13–22. tel. 577 550 552">
 <meta property="og:image" content="assets/logo.png">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -63,7 +63,8 @@
       </div>
       <ul class="hero__badges">
         <li>🌯 Kurczak / Wołowina</li>
-        <li>🔥 Nasze specjały: Servets &amp; XXL</li>
+        <li>🍔 Burgery 100% wołowina</li>
+        <li>🔥 Nasze specjały: Servets, XXL &amp; Pajda</li>
         <li>🥗 Świeże surówki codziennie</li>
       </ul>
     </div>
@@ -115,6 +116,7 @@
     <div class="menu__tabs" role="tablist" aria-label="Kategorie menu">
       <button class="menu__tab is-active" data-tab="kebab" role="tab" aria-selected="true">🌯 Kebab</button>
       <button class="menu__tab" data-tab="male" role="tab" aria-selected="false">🥙 Kebab mały</button>
+      <button class="menu__tab" data-tab="burger" role="tab" aria-selected="false">🍔 Burger</button>
       <button class="menu__tab" data-tab="inne" role="tab" aria-selected="false">🍟 Inne</button>
       <button class="menu__tab" data-tab="napoje" role="tab" aria-selected="false">🥤 Napoje</button>
       <button class="menu__tab" data-tab="dodatki" role="tab" aria-selected="false">➕ Dodatki</button>
@@ -199,6 +201,68 @@
           <div class="dish__row"><h4 class="dish__name">Mały Servets</h4><span class="dish__dots"></span><span class="dish__price">24 zł</span></div>
           <p class="dish__desc">Mięso, frytki, sos</p>
         </article>
+      </div>
+    </div>
+
+    <!-- ===== BURGER ===== -->
+    <div class="menu__panel" id="panel-burger" role="tabpanel">
+      <div class="menu__panel-head">
+        <img src="assets/menu-burger.jpg" alt="Burger z wołowiną, bekonem i serem" class="menu__panel-img">
+        <div>
+          <h3 class="menu__cat">BURGER — 100% WOŁOWINA</h3>
+          <p class="menu__cat-sub">Każdy burger ma 200 g soczystej wołowiny z grilla. Sosy i dodatki możesz dowolnie modyfikować.</p>
+        </div>
+      </div>
+      <div class="menu__grid">
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Classic</h4><span class="dish__dots"></span><span class="dish__price">32 zł</span></div>
+          <p class="dish__desc">200 g wołowiny, sałata, pomidor, korniszon, czerwona cebula, majonez, ketchup, sos BBQ</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Cheese</h4><span class="dish__dots"></span><span class="dish__price">34 zł</span></div>
+          <p class="dish__desc">200 g wołowiny, ser Mimolette, sałata, pomidor, korniszon, czerwona cebula, majonez, ketchup, sos serowy</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Cheese &amp; Becon</h4><span class="dish__dots"></span><span class="dish__price">38 zł</span></div>
+          <p class="dish__desc">200 g wołowiny, ser Mimolette, bekon, cebulka prażona, sałata, pomidor, korniszon, czerwona cebula, majonez, ketchup, sos serowy</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Hot</h4><span class="dish__dots"></span><span class="dish__price">37 zł</span></div>
+          <p class="dish__desc">200 g wołowiny, ser Mimolette, bekon, papryczki jalapeño, pomidor, korniszon, czerwona cebula, majonez, ketchup, sos BBQ, sos sriracha</p>
+        </article>
+        <article class="dish dish--hot">
+          <div class="dish__row"><h4 class="dish__name">Pajda <span class="tag">2× WSZYSTKO</span></h4><span class="dish__dots"></span><span class="dish__price">48 zł</span></div>
+          <p class="dish__desc">2× 200 g wołowiny, 2× ser Mimolette, 2× bekon, cebulka prażona, sałata, pomidor, korniszon, czerwona cebula, majonez, ketchup, sos BBQ — burger dla odważnych</p>
+        </article>
+        <article class="dish dish--hot">
+          <div class="dish__row"><h4 class="dish__name">Wołowina na frytkach <span class="tag">BEZ BUŁKI</span></h4><span class="dish__dots"></span><span class="dish__price">31 zł</span></div>
+          <p class="dish__desc">200 g wołowiny, frytki, ser Mimolette, cebulka prażona, sos serowy, sos BBQ</p>
+        </article>
+      </div>
+
+      <h4 class="menu__cat menu__cat--sub">Dodatki do burgera</h4>
+      <div class="menu__grid menu__grid--compact">
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Dodatkowe mięso 200 g</h4><span class="dish__dots"></span><span class="dish__price">14 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Bekon</h4><span class="dish__dots"></span><span class="dish__price">5 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Ser</h4><span class="dish__dots"></span><span class="dish__price">5 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Papryczki jalapeño</h4><span class="dish__dots"></span><span class="dish__price">3 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Cebulka prażona</h4><span class="dish__dots"></span><span class="dish__price">2 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Opakowanie na wynos</h4><span class="dish__dots"></span><span class="dish__price">1 zł</span></div>
+        </article>
+      </div>
+      <div class="menu__callout">
+        <p><strong>Każdego burgera można modyfikować:</strong> sos firmowy · sos serowy · BBQ · sriracha (ostry) · ketchup · majonez</p>
       </div>
     </div>
 
@@ -338,7 +402,9 @@
     </div>
 
     <p class="menu__note">☝ Wszystkie ceny zawierają podatek. Menu może się różnić w zależności od dnia i dostępności składników.<br>
-    <a class="menu__pdf" href="info.jpg" target="_blank" rel="noopener">🖨 Zobacz oficjalną kartę menu ➜</a></p>
+    Oficjalne karty menu:
+    <a class="menu__pdf" href="info.jpg" target="_blank" rel="noopener">🌯 Kebab </a>
+    <a class="menu__pdf" href="info2.jpg" target="_blank" rel="noopener">🍔 Burger ➜</a></p>
   </div>
 </section>
 
@@ -370,7 +436,12 @@
         <div class="about__point">
           <span class="about__num">04</span>
           <h3>Porcje z charakterem</h3>
-          <p>Servets i Kebab XXL to nasze znaki firmowe. Po wyjściu stąd nie musisz już nic jeść.</p>
+          <p>Servets, Kebab XXL i podwójna Pajda — nasze znaki firmowe. Po wyjściu stąd nie musisz już nic jeść.</p>
+        </div>
+        <div class="about__point">
+          <span class="about__num">05</span>
+          <h3>Burgery 100% wołowina</h3>
+          <p>200 g mięsa z grilla w każdej bułce. Sosy, bekon i ser dokładasz do smaku — od Classic po Hot i Pajdę.</p>
         </div>
       </div>
     </div>
@@ -413,7 +484,7 @@
   <div class="container footer__inner">
     <div class="footer__brand">
       <img src="assets/logo.png" alt="Logo Kebab u Pajdy">
-      <p>KEBAB <em>U PAJDY</em><br><span>Dąbrowa Tarnowska · od serca, z rożna</span></p>
+      <p>KEBAB <em>&amp; BURGER</em> U PAJDY<br><span>Dąbrowa Tarnowska · kebab z rożna, burger z grilla</span></p>
     </div>
     <div class="footer__meta">
       <p>© <span id="year"></span> Kebab u Pajdy. Wszelkie prawa zastrzeżone.</p>
@@ -432,7 +503,7 @@
   "name": "Kebab u Pajdy",
   "image": "assets/logo.png",
   "telephone": "+48 577 550 552",
-  "servesCuisine": ["Kebab", "Turecka", "Fast food"],
+  "servesCuisine": ["Kebab", "Burgery", "Turecka", "Fast food"],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "ul. Piłsudskiego 31",

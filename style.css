@@ -172,12 +172,20 @@ h1,h2,h3,h4,.btn{font-family:var(--font-head);text-transform:uppercase;letter-sp
 .menu__note{margin-top:2.4rem;text-align:center;color:#8b8b8b;font-size:.85rem}
 .menu__pdf{display:inline-block;margin-top:.6rem;font-weight:700;color:var(--yellow)}
 .menu__pdf:hover{text-decoration:underline}
+.menu__cat--sub{font-size:1.15rem;margin:2.2rem 0 .4rem;color:var(--yellow)}
+.menu__grid--compact{gap:0 3rem}
+.menu__callout{
+  margin-top:1.6rem;background:linear-gradient(90deg,rgba(255,200,0,.12),rgba(255,200,0,.03));
+  border:1px solid rgba(255,200,0,.35);border-left:6px solid var(--yellow);
+  border-radius:12px;padding:1.1rem 1.4rem;color:#e8e8e8;
+}
 
 /* ---------- O nas ---------- */
 .about{padding:5.5rem 0;background:var(--panel);border-block:1px solid var(--line);overflow:hidden}
 .about__inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center}
 .about__bull img{filter:drop-shadow(0 24px 44px rgba(255,200,0,.18));transform:rotate(-2deg)}
 .about__points{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:2rem}
+.about__point:last-child{grid-column:1/-1}
 .about__point{background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;transition:.2s}
 .about__point:hover{border-color:var(--yellow);transform:translateY(-3px)}
 .about__num{font-family:var(--font-head);font-weight:700;color:var(--red);font-size:.9rem;letter-spacing:.2em}
