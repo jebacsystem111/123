@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kebab u Pajdy — Dąbrowa Tarnowska | Kebab, Zapiekanki, Frytki</title>
+<meta name="description" content="Kebab u Pajdy w Dąbrowie Tarnowskiej. Świeże surówki, autorskie sosy własnej produkcji i najwyższej jakości mięso od lokalnych dostawców. Kebab kurczak/wołowina, zapiekanki, frytki. Tel. 577 550 552.">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Kebab u Pajdy — Dąbrowa Tarnowska">
+<meta property="og:description" content="Kebab kurczak/wołowina, zapiekanki, frytki i autorskie sosy. Otwarte Pon–Sb 11–22, Nd 13–22. tel. 577 550 552">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Pasek statusu: otwarte / zamknięte -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span id="openStatus" class="topbar__status"><span class="dot dot--grey"></span> Sprawdzam godziny…</span>
+    <span class="topbar__phone"><a href="tel:+48577550552">📞 577&nbsp;550&nbsp;552</a></span>
+  </div>
+</div>
+
+<!-- Nawigacja -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#start" class="nav__brand">
+      <img src="assets/logo.png" alt="Logo Kebab u Pajdy — głowa byka" class="nav__logo">
+      <span class="nav__name">KEBAB <em>U PAJDY</em></span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#menu">Menu</a>
+      <a href="#godziny">Godziny</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="tel:+48577550552" class="btn btn--sm">Zadzwoń i zamów</a>
+    </nav>
+    <button class="nav__burger" id="navBurger" aria-label="Otwórz menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="start">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="hero__kicker">Dąbrowa Tarnowska · ul. Piłsudskiego 31</p>
+      <h1 class="hero__title">KEBAB <span class="accent">U PAJDY</span><br><small class="hero__subline">turecki smak z charakterem</small></h1>
+      <p class="hero__lead">
+        Codziennie własnoręcznie przygotowywane surówki, autorskie sosy
+        własnej produkcji oraz mięso najwyższej jakości od lokalnych dostawców.
+      </p>
+      <div class="hero__cta">
+        <a href="#menu" class="btn btn--primary">Zobacz menu</a>
+        <a href="tel:+48577550552" class="btn btn--ghost">📞 577 550 552</a>
+      </div>
+      <ul class="hero__badges">
+        <li>🌯 Kurczak / Wołowina</li>
+        <li>🔥 Nasze specjały: Servets &amp; XXL</li>
+        <li>🥗 Świeże surówki codziennie</li>
+      </ul>
+    </div>
+    <div class="hero__photo">
+      <div class="hero__photo-frame">
+        <img src="assets/hero-kebab.jpg" alt="Kebab w cieście z mięsem i świeżymi warzywami" width="640" height="640">
+      </div>
+      <div class="hero__hours-card">
+        <p class="hero__hours-title">ODKRYJ NAS</p>
+        <p class="hero__hours">Pon–Pt &amp; Sb: <strong>11–22</strong><br>Nd: <strong>13–22</strong></p>
+      </div>
+    </div>
+  </div>
+  <a href="#godziny" class="hero__scroll" aria-label="Przewiń w dół">▾</a>
+</section>
+
+<!-- Godziny / status -->
+<section class="hours" id="godziny">
+  <div class="container hours__inner">
+    <div class="hours__card">
+      <h2 class="hours__heading">GODZINY<br><span class="accent">OTWARCIA</span></h2>
+      <table class="hours__table">
+        <tbody>
+          <tr><td>Poniedziałek – Piątek</td><td>11:00 – 22:00</td></tr>
+          <tr><td>Sobota</td><td>11:00 – 22:00</td></tr>
+          <tr><td>Niedziela</td><td>13:00 – 22:00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hours__card hours__card--status">
+      <p class="hours__status-label">TERAZ U NAS:</p>
+      <p id="openStatusBig" class="hours__status-value">…</p>
+      <p id="openStatusHint" class="hours__status-hint"></p>
+      <a href="tel:+48577550552" class="btn btn--primary">Zadzwoń i zamów</a>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="menu" id="menu">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-head__kicker">MENU</p>
+      <h2 class="section-head__title">CO <span class="accent">PODAJEMY</span></h2>
+      <p class="section-head__sub">Do każdego kebaba sos do wyboru: łagodny · średni · ostry · bardzo ostry · ketchupowy · curry · serowy</p>
+    </header>
+
+    <!-- Zakładki kategorii -->
+    <div class="menu__tabs" role="tablist" aria-label="Kategorie menu">
+      <button class="menu__tab is-active" data-tab="kebab" role="tab" aria-selected="true">🌯 Kebab</button>
+      <button class="menu__tab" data-tab="male" role="tab" aria-selected="false">🥙 Kebab mały</button>
+      <button class="menu__tab" data-tab="inne" role="tab" aria-selected="false">🍟 Inne</button>
+      <button class="menu__tab" data-tab="napoje" role="tab" aria-selected="false">🥤 Napoje</button>
+      <button class="menu__tab" data-tab="dodatki" role="tab" aria-selected="false">➕ Dodatki</button>
+    </div>
+
+    <!-- ===== KEBAB ===== -->
+    <div class="menu__panel is-active" id="panel-kebab" role="tabpanel">
+      <div class="menu__panel-head">
+        <img src="assets/menu-kebab.jpg" alt="Mięso z rożna" class="menu__panel-img">
+        <div>
+          <h3 class="menu__cat">KEBAB — KURCZAK / WOŁOWINA</h3>
+          <p class="menu__cat-sub">Mięso do wyboru: kurczak lub wołowina. Sos do wyboru.</p>
+        </div>
+      </div>
+      <div class="menu__grid">
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Bułka</h4><span class="dish__dots"></span><span class="dish__price">27 zł</span></div>
+          <p class="dish__desc">Mięso, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Bułka + frytki</h4><span class="dish__dots"></span><span class="dish__price">29 zł</span></div>
+          <p class="dish__desc">Mięso, frytki, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Ciasto</h4><span class="dish__dots"></span><span class="dish__price">27 zł</span></div>
+          <p class="dish__desc">Mięso, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Ciasto + frytki</h4><span class="dish__dots"></span><span class="dish__price">29 zł</span></div>
+          <p class="dish__desc">Mięso, frytki, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Zestaw</h4><span class="dish__dots"></span><span class="dish__price">31 zł</span></div>
+          <p class="dish__desc">Mięso, frytki, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Tortilla wegetariańska</h4><span class="dish__dots"></span><span class="dish__price">23 zł</span></div>
+          <p class="dish__desc">Sos, frytki, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+        </article>
+        <article class="dish dish--hot">
+          <div class="dish__row"><h4 class="dish__name">Servets <span class="tag">NASZA SPECJALNOŚĆ</span></h4><span class="dish__dots"></span><span class="dish__price">29 zł</span></div>
+          <p class="dish__desc">Mięso, frytki, sos — nasza duma i znak rozpoznawczy</p>
+        </article>
+        <article class="dish dish--hot">
+          <div class="dish__row"><h4 class="dish__name">Kebab XXL <span class="tag">ROZMIAR GIGANT</span></h4><span class="dish__dots"></span><span class="dish__price">40 zł</span></div>
+          <p class="dish__desc">Największa porcja w mieście — dla naprawdę głodnych</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- ===== KEBAB MAŁY ===== -->
+    <div class="menu__panel" id="panel-male" role="tabpanel">
+      <div class="menu__panel-head">
+        <img src="assets/hero-kebab.jpg" alt="Kebab w cieście" class="menu__panel-img">
+        <div>
+          <h3 class="menu__cat">KEBAB MAŁY — KURCZAK / WOŁOWINA</h3>
+          <p class="menu__cat-sub">Mniejszy rozmiar, ten sam smak. Idealny na lekki głód.</p>
+        </div>
+      </div>
+      <div class="menu__grid">
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Bułka mała</h4><span class="dish__dots"></span><span class="dish__price">22 zł</span></div>
+          <p class="dish__desc">Mięso, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Bułka mała + frytki</h4><span class="dish__dots"></span><span class="dish__price">24 zł</span></div>
+          <p class="dish__desc">Mięso, frytki, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Ciasto małe</h4><span class="dish__dots"></span><span class="dish__price">22 zł</span></div>
+          <p class="dish__desc">Mięso, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Ciasto małe + frytki</h4><span class="dish__dots"></span><span class="dish__price">24 zł</span></div>
+          <p class="dish__desc">Mięso, frytki, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Mały zestaw</h4><span class="dish__dots"></span><span class="dish__price">24 zł</span></div>
+          <p class="dish__desc">Mięso, frytki, sos, surówka z białej kapusty, surówka z czerwonej kapusty</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Mały Servets</h4><span class="dish__dots"></span><span class="dish__price">24 zł</span></div>
+          <p class="dish__desc">Mięso, frytki, sos</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- ===== INNE ===== -->
+    <div class="menu__panel" id="panel-inne" role="tabpanel">
+      <div class="menu__panel-head">
+        <img src="assets/menu-zapiekanka.jpg" alt="Zapiekanka z serem" class="menu__panel-img">
+        <div>
+          <h3 class="menu__cat">INNE</h3>
+          <p class="menu__cat-sub">Frytki, zapiekanki i sałatka — klasyki ulicznego menu w najlepszym wydaniu.</p>
+        </div>
+      </div>
+      <div class="menu__grid menu__grid--photos">
+        <article class="dish dish--photo">
+          <img src="assets/menu-frytki.jpg" alt="Frytki" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__row"><h4 class="dish__name">Frytki małe</h4><span class="dish__dots"></span><span class="dish__price">12 zł</span></div>
+            <p class="dish__desc">Chrupiące, złociste, solone</p>
+          </div>
+        </article>
+        <article class="dish dish--photo">
+          <img src="assets/menu-frytki.jpg" alt="Frytki duże" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__row"><h4 class="dish__name">Frytki duże</h4><span class="dish__dots"></span><span class="dish__price">15 zł</span></div>
+            <p class="dish__desc">Duża porcja dla niegrzecznych dzieci 😏</p>
+          </div>
+        </article>
+        <article class="dish dish--photo">
+          <img src="assets/menu-zapiekanka.jpg" alt="Zapiekanka" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__row"><h4 class="dish__name">Zapiekanka z serem i pieczarkami</h4><span class="dish__dots"></span><span class="dish__price">15 zł</span></div>
+          </div>
+        </article>
+        <article class="dish dish--photo">
+          <img src="assets/menu-zapiekanka.jpg" alt="Zapiekanka ze świeżymi warzywami" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__row"><h4 class="dish__name">Zapiekanka ze świeżymi warzywami</h4><span class="dish__dots"></span><span class="dish__price">19 zł</span></div>
+          </div>
+        </article>
+        <article class="dish dish--photo">
+          <img src="assets/menu-zapiekanka.jpg" alt="Zapiekanka z dwoma serami" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__row"><h4 class="dish__name">Zapiekanka z 2 rodzajów sera: gouda i mozzarella</h4><span class="dish__dots"></span><span class="dish__price">19 zł</span></div>
+          </div>
+        </article>
+        <article class="dish dish--photo">
+          <img src="assets/menu-zapiekanka.jpg" alt="Zapiekanka z mięsem" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__row"><h4 class="dish__name">Zapiekanka z mięsem</h4><span class="dish__dots"></span><span class="dish__price">25 zł</span></div>
+          </div>
+        </article>
+        <article class="dish dish--photo">
+          <img src="assets/menu-salatka.jpg" alt="Sałatka z mięsem" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__row"><h4 class="dish__name">Sałatka z mięsem</h4><span class="dish__dots"></span><span class="dish__price">25 zł</span></div>
+            <p class="dish__desc">Mięso, sos, pekińska, surówka z białej kapusty, surówka z czerwonej kapusty, ogórek, pomidor, cebula</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- ===== NAPOJE ===== -->
+    <div class="menu__panel" id="panel-napoje" role="tabpanel">
+      <div class="menu__panel-head">
+        <img src="assets/menu-napoje.jpg" alt="Zimne napoje" class="menu__panel-img">
+        <div>
+          <h3 class="menu__cat">NAPOJE</h3>
+          <p class="menu__cat-sub">Chłodne napoje, turecka herbata i kawa z ekspresu.</p>
+        </div>
+      </div>
+      <div class="menu__grid">
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Puszka 0,33 l</h4><span class="dish__dots"></span><span class="dish__price">6 zł</span></div>
+          <p class="dish__desc">Pepsi, 7up, Mirinda, Lipton, Mountain Dew</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Butelka 0,5 l</h4><span class="dish__dots"></span><span class="dish__price">8 zł</span></div>
+          <p class="dish__desc">Pepsi, 7up, Mirinda, Lipton, Mountain Dew</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Woda</h4><span class="dish__dots"></span><span class="dish__price">4 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Kawa mała</h4><span class="dish__dots"></span><span class="dish__price">10 zł</span></div>
+          <p class="dish__desc">Latte, latte macchiato, cappuccino, americano, espresso</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Kawa duża</h4><span class="dish__dots"></span><span class="dish__price">14 zł</span></div>
+          <p class="dish__desc">Latte, latte macchiato, cappuccino, americano, espresso</p>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Herbata mała</h4><span class="dish__dots"></span><span class="dish__price">7 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Herbata duża</h4><span class="dish__dots"></span><span class="dish__price">10 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Napój turecki mango</h4><span class="dish__dots"></span><span class="dish__price">6 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Turecki ayran</h4><span class="dish__dots"></span><span class="dish__price">6 zł</span></div>
+          <p class="dish__desc">Chłodzący jogurtowy napój — klasyk do kebaba</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- ===== DODATKI ===== -->
+    <div class="menu__panel" id="panel-dodatki" role="tabpanel">
+      <div class="menu__panel-head">
+        <img src="assets/menu-salatka.jpg" alt="Dodatki i sosy" class="menu__panel-img">
+        <div>
+          <h3 class="menu__cat">DODATKI</h3>
+          <p class="menu__cat-sub">Dołóż coś od siebie — do kebaba i nie tylko.</p>
+        </div>
+      </div>
+      <div class="menu__grid">
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Dodatkowe mięso</h4><span class="dish__dots"></span><span class="dish__price">10 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Papryczki jalapeño</h4><span class="dish__dots"></span><span class="dish__price">3 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Ser</h4><span class="dish__dots"></span><span class="dish__price">5 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Cebulka prażona</h4><span class="dish__dots"></span><span class="dish__price">2 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Pakowanie na wynos</h4><span class="dish__dots"></span><span class="dish__price">1 zł</span></div>
+        </article>
+        <article class="dish">
+          <div class="dish__row"><h4 class="dish__name">Dodatkowy sos do wyboru</h4><span class="dish__dots"></span><span class="dish__price">3 zł</span></div>
+          <p class="dish__desc">Łagodny, średni, ostry, bardzo ostry, ketchupowy, curry, serowy</p>
+        </article>
+      </div>
+    </div>
+
+    <p class="menu__note">☝ Wszystkie ceny zawierają podatek. Menu może się różnić w zależności od dnia i dostępności składników.<br>
+    <a class="menu__pdf" href="info.jpg" target="_blank" rel="noopener">🖨 Zobacz oficjalną kartę menu ➜</a></p>
+  </div>
+</section>
+
+<!-- O nas -->
+<section class="about" id="o-nas">
+  <div class="container about__inner">
+    <div class="about__bull">
+      <img src="assets/bull.png" alt="Byk — maskotka Kebab u Pajdy" loading="lazy">
+    </div>
+    <div class="about__text">
+      <p class="section-head__kicker">O NAS</p>
+      <h2 class="section-head__title">DLACZEGO <span class="accent">U PAJDY?</span></h2>
+      <div class="about__points">
+        <div class="about__point">
+          <span class="about__num">01</span>
+          <h3>Świeże surówki codziennie</h3>
+          <p>Białą i czerwoną kapustę szykujemy sami, każdego dnia od nowa. Zero przestojów, zero kompromisów.</p>
+        </div>
+        <div class="about__point">
+          <span class="about__num">02</span>
+          <h3>Autorskie sosy własnej produkcji</h3>
+          <p>Od łagodnego po bardzo ostry — siedem sosów, każdy robimy u siebie według własnej receptury.</p>
+        </div>
+        <div class="about__point">
+          <span class="about__num">03</span>
+          <h3>Mięso od lokalnych dostawców</h3>
+          <p>Najwyższa jakość z zaufanych źródeł. Kurczak i wołowina z rożna — zawsze soczyste.</p>
+        </div>
+        <div class="about__point">
+          <span class="about__num">04</span>
+          <h3>Porcje z charakterem</h3>
+          <p>Servets i Kebab XXL to nasze znaki firmowe. Po wyjściu stąd nie musisz już nic jeść.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kontakt -->
+<section class="contact" id="kontakt">
+  <div class="container contact__inner">
+    <header class="section-head section-head--center">
+      <p class="section-head__kicker">KONTAKT</p>
+      <h2 class="section-head__title">WPADNIJ <span class="accent">DO NAS</span></h2>
+    </header>
+    <div class="contact__grid">
+      <div class="contact__card">
+        <h3>📍 Adres</h3>
+        <p>Kebab u Pajdy<br>ul. Piłsudskiego 31<br>33-200 Dąbrowa Tarnowska</p>
+        <a class="link-arrow" href="https://maps.google.com/?q=Kebab+u+Pajdy+Pi%C5%82sudskiego+31+D%C4%85browa+Tarnowska" target="_blank" rel="noopener">Nawiguj ➜</a>
+      </div>
+      <div class="contact__card">
+        <h3>📞 Telefon</h3>
+        <p><a href="tel:+48577550552" class="contact__phone">577 550 552</a></p>
+        <p class="contact__card-note">Zadzwoń i zamów na wynos — odbieramy w godzinach otwarcia.</p>
+      </div>
+      <div class="contact__card">
+        <h3>🕐 Godziny</h3>
+        <p>Pon–Pt: 11:00 – 22:00<br>Sobota: 11:00 – 22:00<br>Niedziela: 13:00 – 22:00</p>
+      </div>
+      <div class="contact__card">
+        <h3>👍 Facebook</h3>
+        <p>Śledź nowości, promocje i codzienne zdjęcia z kuchni.</p>
+        <a class="link-arrow" href="https://www.facebook.com/profile.php?id=61583469870687" target="_blank" rel="noopener">Nasz profil ➜</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stopka -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="Logo Kebab u Pajdy">
+      <p>KEBAB <em>U PAJDY</em><br><span>Dąbrowa Tarnowska · od serca, z rożna</span></p>
+    </div>
+    <div class="footer__meta">
+      <p>© <span id="year"></span> Kebab u Pajdy. Wszelkie prawa zastrzeżone.</p>
+      <p>Codzienne surówki, autorskie sosy i mięso od lokalnych dostawców.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Pływający przycisk telefonu (mobile) -->
+<a href="tel:+48577550552" class="fab" aria-label="Zadzwoń do Kebab u Pajdy">📞</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Kebab u Pajdy",
+  "image": "assets/logo.png",
+  "telephone": "+48 577 550 552",
+  "servesCuisine": ["Kebab", "Turecka", "Fast food"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Piłsudskiego 31",
+    "addressLocality": "Dąbrowa Tarnowska",
+    "postalCode": "33-200",
+    "addressCountry": "PL"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "13:00", "closes": "22:00" }
+  ],
+  "sameAs": "https://www.facebook.com/profile.php?id=61583469870687"
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>
